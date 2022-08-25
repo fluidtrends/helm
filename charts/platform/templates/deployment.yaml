@@ -37,20 +37,27 @@ spec:
               value: "80"
             - name: ENVIRONMENT
               value: "development"
+            - name: MONGO_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-mongodb
+                  key: mongodb-root-password
+            - name: MONGO_URI
+              value: mongodb://root:$(MONGO_PASSWORD)/@mongo-mongodb-headless:27017
             - name: DATABASE
-              value: "fluidtrends"
+              value: fluidtrends
             - name: ENDPOINT_STORAGE
               value: {{ .Values.image.endpointStorage }}
             - name: ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
-                  name: "gitlab-minio-secret"
-                  key: "accesskey"
+                  name: gitlab-minio-secret
+                  key: accesskey
             - name: SECRET_ACCESS_KEY
               valueFrom:
                 secretKeyRef:
-                  name: "gitlab-minio-secret"
-                  key: "secretkey"
+                  name: gitlab-minio-secret
+                  key: secretkey
           ports:
             - name: http
               containerPort: 80
