@@ -37,13 +37,17 @@ spec:
               value: "80"
             - name: ENVIRONMENT
               value: "development"
+            - name: MONGO_USER
+              value: root
             - name: MONGO_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: mongo-mongodb
                   key: mongodb-root-password
-            - name: MONGO_URI
-              value: mongodb://root:$(MONGO_PASSWORD)/@mongo-mongodb-headless:27017
+            - name: MONGO_HOST
+              value: mongo-mongodb-headless
+            - name: MONGO_PORT
+              value: "27017"
             - name: DATABASE
               value: fluidtrends
             - name: ENDPOINT_STORAGE
