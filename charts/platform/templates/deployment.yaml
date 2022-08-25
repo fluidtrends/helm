@@ -32,6 +32,25 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: PORT
+              value: "80"
+            - name: ENVIRONMENT
+              value: "development"
+            - name: DATABASE
+              value: "fluidtrends"
+            - name: ENDPOINT_STORAGE
+              value: {{ .Values.image.endpointStorage }}
+            - name: ACCESS_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: "gitlab-minio-secret"
+                  key: "accesskey"
+            - name: SECRET_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: "gitlab-minio-secret"
+                  key: "secretkey"
           ports:
             - name: http
               containerPort: 80

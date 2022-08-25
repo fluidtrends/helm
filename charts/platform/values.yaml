@@ -5,6 +5,7 @@
 replicaCount: 1
 
 image:
+  endpointStorage: ""
   repository: fluidtrendshub/platform
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
