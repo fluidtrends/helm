@@ -52,6 +52,8 @@ spec:
               value: fluidtrends
             - name: ENDPOINT_STORAGE
               value: {{ .Values.image.endpointStorage }}
+            - name: STORAGE_TLS
+              value: {{ .Values.image.minioEnableTls }}
             - name: ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
