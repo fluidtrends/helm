@@ -51,9 +51,9 @@ spec:
             - name: DATABASE
               value: "fluidtrends"
             - name: ENDPOINT_STORAGE
-              value: {{ .Values.image.endpointStorage | quote}}
+              value: {{ .Values.image.endpointStorage | quote }}
             - name: STORAGE_TLS
-              value: {{ .Values.image.minioEnableTls | quote}}
+              value: {{ .Values.image.minioEnableTls | quote }}
             - name: ACCESS_KEY_ID
               valueFrom:
                 secretKeyRef:
