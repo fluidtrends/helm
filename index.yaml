@@ -3,6 +3,16 @@ entries:
   platform:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-08-31T14:49:42.86346205Z"
+    description: A Helm chart for Kubernetes
+    digest: 67210c0a53f812a90603748acc438b3b882a1c3b7b7ee00159cff1dfde60dc17
+    name: platform
+    type: application
+    urls:
+    - https://github.com/fluidtrends/helm/releases/download/platform-0.0.9/platform-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-08-31T14:02:16.592070641Z"
     description: A Helm chart for Kubernetes
     digest: e424390e22102ef8eae9bd95c5c26fe7d72759b200e9a32c6410a291894247d3
