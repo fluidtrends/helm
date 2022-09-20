@@ -7,6 +7,17 @@ replicaCount: 1
 image:
   endpointStorage: ""
   minioEnableTls: ""
+  ethGateway: ""
+  ethGatewayKey: ""
+  ethContractAddress: ""
+  ethMintTopic: ""
+  ethPrivateTopic: ""
+  ethSystemTopic: ""
+  ethSystemEvent: ""
+  ethMintEvent: ""
+  ethPrivateEvent: ""
+  cityDomain: ""
+  nftBucket: ""
   repository: fluidtrendslab/platform
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
