@@ -67,7 +67,7 @@ spec:
             - name: ETH_GATEWAY
               value: {{ .Values.image.ethGateway | quote }}
             - name: ETH_GATEWAY_KEY
-              value: {{ .Values.image.minioEnableTls | .Values.image.ethGatewayKey }}
+              value: {{ .Values.image.ethGatewayKey | quote }}
             - name: ETH_CONTRACT_ADDRESS
               value: {{ .Values.image.ethContractAddress | quote }}
             - name: ETH_MINT_TOPIC
