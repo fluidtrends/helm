@@ -11,11 +11,9 @@ image:
   ethGatewayKey: ""
   ethContractAddress: ""
   ethMintTopic: ""
-  ethPrivateTopic: ""
-  ethSystemTopic: ""
-  ethSystemEvent: ""
+  ethStateTopic: ""
+  ethStateEvent: ""
   ethMintEvent: ""
-  ethPrivateEvent: ""
   cityDomain: ""
   nftBucket: ""
   repository: fluidtrendslab/platform

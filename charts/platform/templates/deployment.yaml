@@ -72,16 +72,12 @@ spec:
               value: {{ .Values.image.ethContractAddress | quote }}
             - name: ETH_MINT_TOPIC
               value: {{ .Values.image.ethMintTopic | quote }}
-            - name: ETH_PRIVATE_TOPIC
-              value: {{ .Values.image.ethPrivateTopic | quote }}
-            - name: ETH_SYSTEM_TOPIC
-              value: {{ .Values.image.ethSystemTopic | quote }}
-            - name: ETH_SYSTEM_EVENT
-              value: {{ .Values.image.ethSystemEvent | quote }}
+            - name: ETH_STATE_TOPIC
+              value: {{ .Values.image.ethStateTopic | quote }}
+            - name: ETH_STATE_EVENT
+              value: {{ .Values.image.ethStateEvent | quote }}
             - name: ETH_MINT_EVENT
               value: {{ .Values.image.ethMintEvent | quote }}
-            - name: ETH_PRIVATE_EVENT
-              value: {{ .Values.image.ethPrivateEvent | quote }}
             - name: CITY_DOMAIN
               value: {{ .Values.image.cityDomain | quote }}
             - name: NFT_BUCKET
