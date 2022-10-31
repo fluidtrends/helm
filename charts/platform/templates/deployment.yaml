@@ -44,6 +44,11 @@ spec:
                 secretKeyRef:
                   name: "mongo-mongodb"
                   key: "mongodb-root-password"
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: "platform-jwt-secret"
+                  key: "jwt"
             - name: MONGO_HOST
               value: "mongo-mongodb-headless"
             - name: MONGO_PORT
